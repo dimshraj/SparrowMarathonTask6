@@ -56,7 +56,7 @@ class ViewController: UIViewController {
         dynamicAnimator.removeBehavior(snapBehavior)
         let coordinates = gestureRecogniser.location(in: self.view)
         snapBehavior = UISnapBehavior(item: box, snapTo: coordinates)
-        snapBehavior.damping = 2
+        snapBehavior.damping = 0.5
         dynamicAnimator.addBehavior(snapBehavior)
         self.box.backgroundColor = UIColor(red: .random(in: 0...1), green: .random(in: 0...1), blue: .random(in: 0...1), alpha: 1)
     }
